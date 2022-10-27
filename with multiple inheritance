@@ -1,0 +1,29 @@
+# inheritance/mropractice
+# with multiple inheritance
+
+class Person:
+  def __init__(self, firstname, lastname):
+    self.firstname=firstname
+    self.lastname=lastname
+    print('In Class Person')
+
+class With_honor(Person):
+  def __init__(self, class_adviser, general_average, firstname, lastname):
+    super().__init__(firstname, lastname)
+    self.class_adviser=class_adviser
+    self.general_average=general_average
+    print('In Class With_honor')
+    
+class Student(With_honor):
+  def __init__(self, firstname, lastname, sr_code, section, grade, class_adviser, general_average):
+    super().__init__(class_adviser, general_average, firstname, lastname)
+    self.sr_code=sr_code
+    self.section=section
+    self.grade=grade
+    print('In Class Student' )
+
+student=Student('Lyzel', 'Leido', 2103618, 2101, 1.50, 'Sir JM', 1.39)
+print(student.lastname)
+print(student.class_adviser)
+print(student.section)
+
