@@ -1,5 +1,5 @@
 # inheritance/mropractice
-# with multiple inheritance
+# with multilevel inheritance
 
 class Person:
   def __init__(self, firstname, lastname):
